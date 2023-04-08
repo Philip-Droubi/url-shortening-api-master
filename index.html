@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <meta name='designer' content='Philip Droubi'>
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="stylesheet" href="CSS/mobile_nav.css">
+  <title>Frontend Mentor | url-shortening-api-master</title>
+</head>
+
+<body>
+  <header>
+    <div class="wideNav">
+      <div class="container">
+        <ul class="left">
+          <li><a href="#"><img src="images/logo.svg" alt="shortly logo image"></a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+        <ul class="right">
+          <li><button>Login</button></li>
+          <li><button class="signUp">Sign Up</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobileNav">
+      <div class="container">
+        <div class="logo"><a href="#"><img src="images/logo.svg" alt="shortly logo image"></a></div>
+        <div class="berg">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="menu hidden">
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+        <ul>
+          <li><button>Login</button></li>
+          <li><button class="signUp">Sign Up</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- landing -->
+  <div class="landing">
+    <div class="container">
+      <div class="left">
+        <h1>More than just shorter links</h1>
+        <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+        <button class="getStartedBtn">Get Started</button>
+      </div>
+      <div class="right">
+        <img src="images/illustration-working.svg" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+  <!-- Shorten Sec -->
+  <div class="shortenSec">
+    <form action="">
+      <input type="text" name="SLI" id="SLI" class="LinkInput" placeholder="Shorten a link here...">
+      <button>Shorten It!</button>
+      <div class="formErrorMessage hidden"></div>
+    </form>
+    <div class="linkRes hidden"></div>
+    <!-- text Sec -->
+    <div class="text">
+      <div class="container">
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+      </div>
+    </div>
+    <!-- Cards Sec -->
+    <div class="cardsSec">
+      <div class="container">
+        <div class="card">
+          <div class="img">
+            <img src="images/icon-brand-recognition.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="ctext">
+            <h3>Brand Recognition</h3>
+            <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil
+              confidence in your content.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img">
+            <img src="images/icon-detailed-records.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="ctext">
+            <h3>Detailed Records</h3>
+            <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content
+              helps
+              inform better decisions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img">
+            <img src="images/icon-fully-customizable.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="ctext">
+            <h3>Fully Customizable</h3>
+            <p>Improve brand awareness and content discoverability through customizable links, supercharging audience
+              engagement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Booster -->
+    <div class="boostSec">
+      <div class="container">
+        <h2>Boost your links today</h2>
+        <button class="getStartedBtn">Get Started</button>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="left">
+        <div class="logo">
+          <img src="images/logo.svg" alt="shortly logo image">
+        </div>
+      </div>
+      <div class="right">
+        <ul>
+          <li class="name">Features</li>
+          <li><a href="#">Link Shortening</a></li>
+          <li><a href="#">Branded Links</a></li>
+          <li><a href="#">Analytics</a></li>
+        </ul>
+        <ul>
+          <li class="name">Resources</li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Developers</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+        <ul>
+          <li class="name">Company</li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a href="#" aria-label="facebook page link"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" aria-label="twitter page link"><i class="fab fa-twitter    "></i></a></li>
+          <li><a href="#" aria-label="pinterest page link"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="instagram page link"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+        Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Philip-Droubi" target="_blank" rel="noopener">Philip
+        Droubi</a>.
+    </div>
+  </footer>
+  <script src="JS/main.js"></script>
+  <script src="JS/navBar.js"></script>
+</body>

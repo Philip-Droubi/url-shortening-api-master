@@ -1,0 +1,60 @@
+.mobileNav {
+    position: relative;
+}
+
+.mobileNav .berg {
+    width: 40px;
+    cursor: pointer;
+}
+
+.mobileNav .berg span {
+    background-color: var(--Grayish-Violet);
+    width: 100%;
+    height: 3px;
+    display: block;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.mobileNav .berg span:nth-child(2) {
+    margin: 8px 0;
+    width: 75%;
+}
+
+.mobileNav .berg span:nth-child(3) {
+    width: 50%;
+}
+
+.mobileNav .menu {
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    width: 90%;
+    max-width: 450px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: var(--Dark-Violet);
+}
+
+.mobileNav .menu ul:nth-child(1) {
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileNav .menu ul:nth-child(2) li:not(:nth-child(2)),
+.mobileNav .menu ul:nth-child(1) li {
+    margin-bottom: 20px;
+}
+
+.mobileNav .menu .signUp {
+    background-color: var(--Cyan);
+    color: white;
+    border-radius: 34px;
+    padding: 7px 20px;
+    transition: 0.16s;
+    width: 100%;
+    max-width: 350px;
+}
