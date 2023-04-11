@@ -394,7 +394,7 @@ header .container ul li .signUp:hover {
     position: relative;
     background-color: white;
     border-radius: 6px;
-    padding: 76px 30px 26px;
+    padding: 76px 32px 26px;
     max-width: 350px;
     height: fit-content;
     z-index: 50;
