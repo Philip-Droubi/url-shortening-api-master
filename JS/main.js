@@ -1,22 +1,41 @@
 // CREATED BY PHILIP DROUBI
 let input = document.querySelector(".LinkInput");
 let msg = document.querySelector(".formErrorMessage");
+let msgMobil = document.querySelector(".formErrorMessageMobile");
+let errorBox = msg;
 let shortenForm = document.querySelector(".shortenSec form");
 let shortenBtn = document.querySelector(".shortenSec form button");
 let generatedLink = document.querySelector(".linkRes");
 let timer;
 let ableToSend = true;
+let mobileView = false;
+
+checkWidth();
+
+function checkWidth() {
+    let width = window.innerWidth;
+    if (width <= 768 && !mobileView) {
+        mobileView = true;
+        errorBox = msgMobil;
+    }
+    else if (width > 768 && mobileView) {
+        mobileView = false;
+        errorBox = msg;
+    }
+}
+
+window.addEventListener('resize', checkWidth);
 
 shortenBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    msg.classList.add("hidden");
+    errorBox.classList.add("hidden");
     input.style.border = "none";
     if (input.value.length < 5) {
         if (input.value.length == 0)
-            msg.textContent = "Please add a link";
+            showReqError("Please add a link");
         else
-            msg.textContent = "Please add a valid link";
-        msg.classList.remove("hidden");
+            showReqError("Please add a valid link");
+        errorBox.classList.remove("hidden");
         input.style.border = "2px solid var(--Red)";
     } else {
         if (ableToSend) {
@@ -64,20 +83,18 @@ function createShortLink(oldLink, newLink) {
 }
 
 function showReqError(err) {
-    shortenForm.append(msg);
-    msg.style.opacity = "1";
+    errorBox.style.opacity = "1";
     clearTimeout(timer);
-    msg.textContent = err;
-    msg.classList.remove("hidden");
+    errorBox.textContent = err;
+    errorBox.classList.remove("hidden");
     input.style.border = "2px solid var(--Red)";
     shortenBtn.blur();
     shortenBtn.innerHTML = "Shorten It!";
     if (window.innerWidth < 768) {
-        document.body.append(msg);
         timer = setTimeout(() => {
-            msg.style.opacity = "0";
+            errorBox.style.opacity = "0";
             setTimeout(() => {
-                msg.classList.add("hidden");
+                errorBox.classList.add("hidden");
             }, 500);
         }, 4000);
     }
