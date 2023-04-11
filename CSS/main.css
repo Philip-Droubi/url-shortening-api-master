@@ -3,7 +3,7 @@
 :root {
     --Cyan: hsl(180, 66%, 49%);
     --Dark-Violet: hsl(257, 27%, 26%);
-    --message-bg: hsl(257, 27%, 26%);
+    --message-bg: hsl(258, 26%, 36%);
     --Red: hsl(0, 87%, 67%);
     --Gray: hsl(0, 0%, 75%);
     --Grayish-Violet: hsl(257, 7%, 63%);
@@ -271,6 +271,24 @@ header .container ul li .signUp:hover {
     color: var(--Red);
     font-style: italic;
     transition: 0.5s;
+}
+
+.formErrorMessageMobile {
+    text-transform: capitalize;
+    position: fixed;
+    color: var(--Red);
+    font-style: italic;
+    transition: 0.5s;
+    border: 2px dashed var(--Red);
+    top: 80px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--message-bg);
+    padding: 10px 16px;
+    text-align: center;
+    border-radius: 80px;
+    z-index: 500;
 }
 
 .linkRes {
@@ -639,20 +657,6 @@ footer .right .social a:hover {
 }
 
 @media (max-width:767px) {
-    .formErrorMessage {
-        position: fixed;
-        border: 2px dashed var(--Red);
-        top: initial;
-        top: 60px;
-        width: 80%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: var(--message-bg);
-        padding: 10px 16px;
-        text-align: center;
-        border-radius: 80px;
-    }
-
     header {
         padding: 38px 0;
     }
